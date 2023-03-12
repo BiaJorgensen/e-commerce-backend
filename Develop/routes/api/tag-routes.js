@@ -51,13 +51,15 @@ router.put('/:id', async (req, res) => {
     return;
   }
   try {
-    const updateTag = await Tag.update(req.body, {
+    const [updateTag] = await Tag.update(req.body, {
       where: {
         id: req.params.id
       }
+      
     });
-    if (!updateTag) {
-      res.status(404).json({ message: 'No tag found with that ID' });
+    console.log(updateTag);
+    if (updateTag === 0) {
+      res.status(200).json({ message: 'No update has been made' });
       return;
     }
     res.status(200).json('Tag name has been updated');
