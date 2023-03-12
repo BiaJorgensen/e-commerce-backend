@@ -46,7 +46,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
-  if (!req.body.category_name ) {
+  if (!req.body.category_name) {
     res.status(400).json({ message: 'Request body cannot be empty' });
     return;
   }
