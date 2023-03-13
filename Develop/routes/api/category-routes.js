@@ -45,11 +45,12 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-  // update a category by its `id` value
+//  Verify if category_name to be updated to is provided
   if (!req.body.category_name) {
     res.status(400).json({ message: 'Request body cannot be empty' });
     return;
-  }
+  };
+   // update a category by its `id` value
 try {
   const updateCategory = await Category.update(req.body, 
     {
