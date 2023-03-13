@@ -1,7 +1,7 @@
 # E-commerce Back End [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-E-commerce Back End project is a functional Express.js API that uses Sequelize to create and modify tables in a MySQL database for e-commerce. For this project, Insomnia Core is used to test endpoints to GET, POST, PUT and DELETE.\
+E-commerce Back End project is a functional Express.js API that uses Sequelize to create and modify tables in a MySQL database for e-commerce. For this project, Insomnia Core is used to test endpoints to **GET**, **POST**, **PUT** and **DELETE**.\
 This API allows users to see, add, update and/or delete Categories, Products and products' Tags.\
 This project is part of a challenge from Full Stack Coding Bootcamp at the University of Minnesota.
 
@@ -16,10 +16,10 @@ To get access to the database to manage and view data, user needs to do the foll
 1. Clone this project's repository to local machine by using SSH Key `git@github.com:BiaJorgensen/e-commerce-backend.git`
 1. Use .env.EXAMPLE in the Develop folder to enter your MySQL username and password (remane file to remove .EXAMPLE)
 1. To create the database:
-    * In the CLI, navigate to db folder (./Develop/db)
+    * In the command line (CLI), navigate to db folder (./Develop/db)
     * Type `mysql -u root -p`
     * Enter your password
-    * Type SOURCE schema.sql
+    * Type `SOURCE schema.sql`
 1. To seed data to the database:
     * In the CLI, navigate to the Develop folder
     * Type `npm run seed`
@@ -28,22 +28,22 @@ To get access to the database to manage and view data, user needs to do the foll
     * Type `npm i` to guarantee dependencies are installed
     * Type `npm start`
 1. After doing the steps above, open the Insomnia app.
-    * To GET, POST, PUT and/or DELETE Category:
-        * GET `http://127.0.0.1:3001/api/categories` (to see all categories)
-        * GET `http://127.0.0.1:3001/api/categories/{:id}` (to see a category)
-        * POST `http://127.0.0.1:3001/api/categories` (adds new Category)
+    * To **GET**, **POST**, **PUT** and/or **DELETE** Category:
+        * **GET** `http://127.0.0.1:3001/api/categories` (to see all categories)
+        * **GET** `http://127.0.0.1:3001/api/categories/{:id}` (to see a category)
+        * **POST** `http://127.0.0.1:3001/api/categories` (to add a new category)
             * Use { "category_name" : "_new category name_" } in Body JSON
-        * PUT `http://127.0.0.1:3001/api/categories/{:id}` (to update a category)
+        * **PUT** `http://127.0.0.1:3001/api/categories/{:id}` (to update a category)
             * In Body JSON:<br/>
             {<br/>
             "category_name" : "_updated category name_"<br/>
             }
-        * DELETE `http://127.0.0.1:3001/api/categories/{:id}` (to delete a category)
+        * **DELETE** `http://127.0.0.1:3001/api/categories/{:id}` (to delete a category)
         <br/><br/>
-    * To GET, POST, PUT and/or DELETE Product:
-        * GET `http://127.0.0.1:3001/api/products` (to see all products)
-        * GET `http://127.0.0.1:3001/api/products/{:id}` (to see a product)
-        * POST `http://127.0.0.1:3001/api/products` (adds new product)
+    * To **GET**, **POST**, **PUT** and/or **DELETE** Product:
+        * **GET** `http://127.0.0.1:3001/api/products` (to see all products)
+        * **GET** `http://127.0.0.1:3001/api/products/{:id}` (to see a product)
+        * **POST** `http://127.0.0.1:3001/api/products` (to add a new product)
             * In Body JSON:<br/>
             {<br/>
             "product_name": "_new product name_",<br/>
@@ -51,7 +51,7 @@ To get access to the database to manage and view data, user needs to do the foll
             "stock": "_quantity in stock_",<br/>
             "tagIds": ["_array of tags for the product_"]<br/>
             }
-        * PUT `http://127.0.0.1:3001/api/products/{:id}` (to update a product)
+        * **PUT** `http://127.0.0.1:3001/api/products/{:id}` (to update a product)
              * In Body JSON:<br/>
             {<br/>
             "product_name": "_updated product name_",<br/>
@@ -59,22 +59,22 @@ To get access to the database to manage and view data, user needs to do the foll
             "stock": "_updated quantity in stock_",<br/>
             "tagIds": ["_updated array of tags for the product_"]<br/>
             }
-        * DELETE `http://127.0.0.1:3001/api/products/{:id}` (to delete a product)
+        * **DELETE** `http://127.0.0.1:3001/api/products/{:id}` (to delete a product)
         <br/><br/>
-    * To GET, POST, PUT and/or DELETE Tag:
-        * GET `http://127.0.0.1:3001/api/tags` (to see all tags)
-        * GET `http://127.0.0.1:3001/api/tags/{:id}` (to see a tag)
-        * POST `http://127.0.0.1:3001/api/tags` (adds new tag)
+    * To **GET**, **POST**, **PUT** and/or **DELETE** Tag:
+        * **GET** `http://127.0.0.1:3001/api/tags` (to see all tags)
+        * **GET** `http://127.0.0.1:3001/api/tags/{:id}` (to see a tag)
+        * **POST** `http://127.0.0.1:3001/api/tags` (to add a new tag)
             * In Body JSON:<br/>
             {<br/>
             "tag_name": "_new tag name_",<br/>
             }
-        * PUT `http://127.0.0.1:3001/api/tags/{:id}` (to update a tag)
+        * **PUT** `http://127.0.0.1:3001/api/tags/{:id}` (to update a tag)
              * In Body JSON:<br/>
             {<br/>
             "tag_name": "_updated tag name_",<br/>
             }
-        * DELETE `http://127.0.0.1:3001/api/tags/{:id}` (to delete a tag)
+        * **DELETE** `http://127.0.0.1:3001/api/tags/{:id}` (to delete a tag)
         
 
 ## Credits
